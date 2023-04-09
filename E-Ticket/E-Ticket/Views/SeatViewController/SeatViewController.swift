@@ -39,7 +39,7 @@ final class SeatViewController: UIViewController{
 
 extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 55
+        return 60
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,7 +53,7 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.seatNumberLabel.text = "\(indexPath.row + 1)"
         
         
-        let hidden = (indexPath.row == 26 || indexPath.row == 25) || (indexPath.row - 2) % 5 == 0 && indexPath.row <= totalSeats
+        let hidden = (indexPath.row == 28 || indexPath.row == 29) || (indexPath.row - 2) % 5 == 0 && indexPath.row <= totalSeats
         cell.isHidden = hidden
         
         
