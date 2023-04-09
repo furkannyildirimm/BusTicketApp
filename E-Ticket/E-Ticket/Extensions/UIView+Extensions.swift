@@ -2,7 +2,7 @@
 //  UIView+Extensions.swift
 //  E-Ticket
 //
-//  Created by STARK on 1.04.2023.
+//  Created by Furkan YILDIRIM on 1.04.2023.
 //
 
 import UIKit

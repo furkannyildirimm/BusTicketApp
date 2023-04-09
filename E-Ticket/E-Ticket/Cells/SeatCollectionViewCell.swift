@@ -2,7 +2,7 @@
 //  SeatCollectionViewCell.swift
 //  E-Ticket
 //
-//  Created by STARK on 5.04.2023.
+//  Created by Furkan YILDIRIM on 5.04.2023.
 //
 
 import UIKit

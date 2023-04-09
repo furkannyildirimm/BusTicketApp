@@ -2,7 +2,7 @@
 //  SeatViewController.swift
 //  E-Ticket
 //
-//  Created by STARK on 3.04.2023.
+//  Created by Furkan YILDIRIM on 3.04.2023.
 //
 
 import UIKit
@@ -45,59 +45,58 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // nasıl göründüğü
         
+        
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as! SeatCollectionViewCell
+
         
         cell.seatNumberLabel.text = "\(indexPath.row + 1)"
         
-        let hidden = (indexPath.row == 26 || indexPath.row == 25) || (indexPath.row - 2) % 5 == 0 && indexPath.row <= totalSeats
         
+        let hidden = (indexPath.row == 26 || indexPath.row == 25) || (indexPath.row - 2) % 5 == 0 && indexPath.row <= totalSeats
         cell.isHidden = hidden
         
-        cell.setup(model: Seats(seatsImage: "seat", seatsNumber: indexPath.row + 1))
-
-        if selectedSeats.contains(indexPath.row) {
-            cell.backgroundColor = UIColor.orange
-        } else {
-            cell.backgroundColor = UIColor.clear
-        }
         
+        cell.setup(model: Seats(seatsImage: "seat", seatsNumber: indexPath.row+1))
         
-        
-        return cell
-    }
-    
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
-    
-            let selectedCell = collectionView.cellForItem(at: indexPath)
-            
-            let seatNumber = indexPath.row + 1
-            
-    
-            if selectedSeats.contains(indexPath.row+1) {
-                // If already selected, deselect
-                if let index = selectedSeats.firstIndex(of: indexPath.row+1) {
-                    selectedSeats.remove(at: index)
+        if selectedSeats.contains(indexPath.row+1) {
+                    cell.seatImg.image = UIImage(named: "seat2")
+                } else {
+                    cell.seatImg.image = UIImage(named: "seat")
                 }
-                selectedCell?.backgroundColor = UIColor.clear
-            } else {
-                // If not selected, select if there are less than 5 seats selected
-                if selectedSeats.count < 5 {
-                    selectedSeats.append(indexPath.row+1)
-                    selectedCell?.backgroundColor = UIColor.orange
-                }else{
-                    
-                    Alert.showAlert(alertTitle: "UYARI", alertMessage: "5 Koltuktan fazla seçemezsin.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
-                    
-                }
-                    
+                
+                return cell
             }
-            selectedSeatsLabel.text = selectedSeats.map { String($0) }.joined(separator: ", ")
-
-    
-            //print("Selected seats: \(selectedSeats)")
+            
+            func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+                let selectedCell = collectionView.cellForItem(at: indexPath) as! SeatCollectionViewCell
+                
+                let seatNumber = indexPath.row + 1
+                
+                if selectedSeats.contains(seatNumber) {
+                    
+                    if let index = selectedSeats.firstIndex(of: seatNumber) {
+                        selectedSeats.remove(at: index)
+                    }
+                    selectedCell.seatImg.image = UIImage(named: "seat")
+                } else {
+                    
+                    if selectedSeats.count < 5 {
+                        selectedSeats.append(seatNumber)
+                        selectedCell.seatImg.image = UIImage(named: "seat2")
+                    } else {
+                        Alert.showAlert(alertTitle: "UYARI", alertMessage: "5 Koltuktan fazla seçemezsin.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+                    }
+                }
+                
+                selectedSeatsLabel.text = selectedSeats.map { String($0) }.joined(separator: ", ")
+                //print("Selected seats: \(selectedSeats)")
+            }
         }
-    }
+        
+    
+    
+    
     
     
     
