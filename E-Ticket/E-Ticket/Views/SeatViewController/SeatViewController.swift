@@ -12,11 +12,14 @@ final class SeatViewController: UIViewController{
     var totalSeats = 55
 
     @IBOutlet weak var seatsCollectionView: UICollectionView!
-    
     @IBOutlet weak var selectedSeatsLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
+    
     var busTicketModel = BusTicket()
     var selectedIndexPath: IndexPath?
     var selectedSeats = [Int]()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,12 @@ final class SeatViewController: UIViewController{
         
     }
     
+    func updateTotalPrice() {
+        let seatPrice = 500
+        let totalPrice = selectedSeats.count * seatPrice
+        totalPriceLabel.text = "\(totalPrice) TL"
+    }
+    
 }
 
 extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -43,9 +52,6 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // nasıl göründüğü
-        
-        
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as! SeatCollectionViewCell
 
@@ -90,8 +96,11 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 }
                 
                 selectedSeatsLabel.text = selectedSeats.map { String($0) }.joined(separator: ", ")
-                //print("Selected seats: \(selectedSeats)")
+                updateTotalPrice()
             }
+    
+    
+    
         }
         
     

@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
             vc.modalTransitionStyle = .flipHorizontal
             vc.ticketMove = info
             navigationController?.pushViewController(vc, animated: true)
+            
         }
         
         
@@ -88,9 +89,9 @@ extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        if pickerView.tag == 0 {
+        if pickerView == chooseCityView {
             fromData = cities[row]
-        } else {
+        } else if pickerView == chooseCityTwoView {
             toData = cities[row]
         }
         
