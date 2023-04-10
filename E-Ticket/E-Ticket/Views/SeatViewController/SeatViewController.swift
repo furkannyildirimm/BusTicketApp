@@ -92,6 +92,7 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         selectedCell.seatImg.image = UIImage(named: "seat2")
                     } else {
                         Alert.showAlert(alertTitle: "UYARI", alertMessage: "5 Koltuktan fazla seçemezsin.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+                        
                     }
                 }
                 
