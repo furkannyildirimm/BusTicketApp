@@ -2,12 +2,13 @@
 //  PayTicketViewController.swift
 //  E-Ticket
 //
-//  Created by STARK on 9.04.2023.
+//  Created by Furkan YILDIRIM on 9.04.2023.
 //
 
 import UIKit
 
 class PayTicketViewController: UIViewController {
+    
     
     
     
@@ -31,6 +32,8 @@ class PayTicketViewController: UIViewController {
         cardNumber.placeholder = "Card Number"
         expirationDate.placeholder = "Month/Year"
         cardCvc.placeholder = "369"
+        
+        
 
         
     }
@@ -50,7 +53,10 @@ class PayTicketViewController: UIViewController {
             Alert.showAlert(alertTitle: "Error", alertMessage: "Please fill in all fields.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
             return
            }
-        
+        UserDefaults.standard.set(nameTextField.text!, forKey: "Name")
+        UserDefaults.standard.set(surnameTextField.text!, forKey: "Surname")
+        UserDefaults.standard.set(ıdTextField.text!, forKey: "ID")
+        UserDefaults.standard.set(phoneNumberTextField.text!, forKey: "Phone")
         
     }
     

@@ -20,11 +20,11 @@ class TicketViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "VoyageCell", bundle: nil), forCellReuseIdentifier: "VoyageCell")
-        selectedCompanyList.append(BusTicket(time: "13:30", price: "500 ₺", busCompImg: "kamilkoc",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
-        selectedCompanyList.append(BusTicket(time: "16:30", price: "500 ₺", busCompImg: "asyaTur",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
-        selectedCompanyList.append(BusTicket(time: "20:30", price: "500 ₺", busCompImg:"pamukkaleturizm",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
-        selectedCompanyList.append(BusTicket(time: "17:30", price: "500 ₺", busCompImg: "ulusoy",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
-        selectedCompanyList.append(BusTicket(time: "15:30", price: "500 ₺", busCompImg: "metro",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
+        selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "kamilkoc",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
+        selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "asyaTur",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
+        selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg:"pamukkaleturizm",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
+        selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "ulusoy",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
+        selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "metro",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
         
         print(ticketMove.from)
 

@@ -17,6 +17,7 @@
 		58AFC2FF29E311FA00C34519 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFC2FE29E311FA00C34519 /* Passenger.swift */; };
 		58B7B8A329DA066800166932 /* VoyageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B7B8A129DA066800166932 /* VoyageCell.swift */; };
 		58B7B8A429DA066800166932 /* VoyageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58B7B8A229DA066800166932 /* VoyageCell.xib */; };
+		58E18E2E29E441ED008A2F3B /* InfoTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E18E2D29E441ED008A2F3B /* InfoTicketViewController.swift */; };
 		58E5AD3829D89DEB00C7280C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5AD3729D89DEB00C7280C /* AppDelegate.swift */; };
 		58E5AD3A29D89DEB00C7280C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5AD3929D89DEB00C7280C /* SceneDelegate.swift */; };
 		58E5AD3C29D89DEB00C7280C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5AD3B29D89DEB00C7280C /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		58AFC2FE29E311FA00C34519 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
 		58B7B8A129DA066800166932 /* VoyageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCell.swift; sourceTree = "<group>"; };
 		58B7B8A229DA066800166932 /* VoyageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoyageCell.xib; sourceTree = "<group>"; };
+		58E18E2D29E441ED008A2F3B /* InfoTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTicketViewController.swift; sourceTree = "<group>"; };
 		58E5AD3429D89DEB00C7280C /* E-Ticket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ticket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E5AD3729D89DEB00C7280C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E5AD3929D89DEB00C7280C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		58E18E2A29E44166008A2F3B /* InfoTicketViewController */ = {
+			isa = PBXGroup;
+			children = (
+				58E18E2D29E441ED008A2F3B /* InfoTicketViewController.swift */,
+			);
+			path = InfoTicketViewController;
+			sourceTree = "<group>";
+		};
 		58E5AD2B29D89DEB00C7280C = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		58E5AD5329D8A46800C7280C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				58E18E2A29E44166008A2F3B /* InfoTicketViewController */,
 				58AFC2FB29E304E200C34519 /* PayTicketViewController */,
 				58151DE629DB911400797F73 /* SeatViewController */,
 				5800F49B29D9092A008DCE51 /* Ticket */,
@@ -270,6 +281,7 @@
 				581462F129D9AC5F00B32562 /* BusTicket.swift in Sources */,
 				58E5AD5629D8A4E100C7280C /* OnboardingViewController.swift in Sources */,
 				58E5AD5D29D8C50800C7280C /* HomeViewController.swift in Sources */,
+				58E18E2E29E441ED008A2F3B /* InfoTicketViewController.swift in Sources */,
 				5805DF6529E0C5C200BEF4D8 /* TravelMoveModel.swift in Sources */,
 				58E5AD5029D8A33100C7280C /* UIView+Extensions.swift in Sources */,
 				58B7B8A329DA066800166932 /* VoyageCell.swift in Sources */,

@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     var info = TravelMoveModel()
     var fromData = "Adana"
     var toData = "Adana"
+    var date : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class HomeViewController: UIViewController {
             Alert.showAlert(alertTitle: "UYARI", alertMessage: "Aynı Şehir Seçilemez.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
         }else {
             getMoveData()
+            saveData()
             let vc = storyboard?.instantiateViewController(withIdentifier: "ticketViewController") as! TicketViewController
             vc.navigationItem.largeTitleDisplayMode = .never
             vc.modalPresentationStyle = .fullScreen
@@ -45,11 +47,14 @@ class HomeViewController: UIViewController {
             
         }
         
+    
         
-        
-        
-        
-        
+    }
+    
+    func saveData() {
+        UserDefaults.standard.set(fromData, forKey: "fromLocation")
+        UserDefaults.standard.set(toData, forKey: "toLocation")
+        UserDefaults.standard.set(self.date, forKey: "date")
     }
     
     @IBAction func dateSelectedFromDatePicker(_ sender: UIDatePicker) {
@@ -68,6 +73,7 @@ class HomeViewController: UIViewController {
         info.day = date.day!
         info.month = date.month!
         info.year = date.year!
+        self.date = "\(date.day!)" + "/" + "\(date.month!)" + "/" + "\(date.year!)"
     }
     
 }

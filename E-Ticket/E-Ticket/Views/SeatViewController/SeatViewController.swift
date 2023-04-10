@@ -31,6 +31,15 @@ final class SeatViewController: UIViewController{
 
     }
     
+    
+    @IBAction func buyTicketBtn(_ sender: UIButton) {
+        
+        if selectedSeats.count == 0 {
+            Alert.showAlert(alertTitle: "UYARI", alertMessage: "Koltuk Seçimi yapınız.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+        }
+    }
+    
+    
     private func configureCollectionView(){
         
         seatsCollectionView.delegate = self
@@ -39,7 +48,7 @@ final class SeatViewController: UIViewController{
     }
     
     func updateTotalPrice() {
-        let seatPrice = 500
+        let seatPrice = 200
         let totalPrice = selectedSeats.count * seatPrice
         totalPriceLabel.text = "\(totalPrice) TL"
     }
@@ -98,6 +107,15 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 
                 selectedSeatsLabel.text = selectedSeats.map { String($0) }.joined(separator: ", ")
                 updateTotalPrice()
+                
+                let seatNumbersString = selectedSeats.map { String($0) }.joined(separator: ",")
+                        UserDefaults.standard.set(seatNumbersString, forKey: "selectedSeats")
+
+                        
+                        if let seatNumbersString = UserDefaults.standard.string(forKey: "selectedSeats") {
+                            let number = seatNumbersString.components(separatedBy: ",").compactMap { Int($0) }
+                            
+                        }
             }
     
     

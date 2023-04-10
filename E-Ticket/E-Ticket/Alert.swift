@@ -26,9 +26,6 @@ class Alert {
         alert.addAction(cancelButton)
 
         viewController.present(alert, animated: true,completion: nil)
-
+        
     }
-
-
-
 }
