@@ -36,8 +36,10 @@ class HomeViewController: UIViewController {
         if fromData == toData {
             Alert.showAlert(alertTitle: "UYARI", alertMessage: "Aynı Şehir Seçilemez.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
         }else {
+            
             getMoveData()
             saveData()
+            
             let vc = storyboard?.instantiateViewController(withIdentifier: "ticketViewController") as! TicketViewController
             vc.navigationItem.largeTitleDisplayMode = .never
             vc.modalPresentationStyle = .fullScreen

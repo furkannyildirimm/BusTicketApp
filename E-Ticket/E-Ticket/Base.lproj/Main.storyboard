@@ -629,6 +629,13 @@
                                 <rect key="frame" x="200" y="684" width="72" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwl-K6-YVq">
+                                <rect key="frame" x="148" y="207" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzk-Ar-kR7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -637,6 +644,7 @@
                     <connections>
                         <outlet property="cardCvc" destination="YjD-xE-kTN" id="i3q-WJ-FG9"/>
                         <outlet property="cardNumber" destination="0bw-7m-IpS" id="5fW-Ee-slr"/>
+                        <outlet property="countdownLabel" destination="Iwl-K6-YVq" id="VAa-8v-fyE"/>
                         <outlet property="expirationDate" destination="KVY-aU-Bm3" id="vji-G1-cLe"/>
                         <outlet property="nameTextField" destination="vrP-JM-awD" id="WsK-aK-iHu"/>
                         <outlet property="payNameSurname" destination="BTu-hT-TuT" id="jVn-hb-xnH"/>

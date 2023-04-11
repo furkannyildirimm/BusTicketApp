@@ -56,6 +56,9 @@ class InfoTicketViewController: UIViewController {
         if let idate = date as? String {
             dateLbl.text = "\(idate)"
         }
+        
+        navigationItem.hidesBackButton = true
+
             
         
 }
@@ -71,7 +74,12 @@ class InfoTicketViewController: UIViewController {
     
     @IBAction func homeBtn(_ sender: UIButton) {
         
+        backToHomePage()
         
+    }
+    
+    func backToHomePage() {
+        navigationController?.popToRootViewController(animated: true)
     }
         
 }
