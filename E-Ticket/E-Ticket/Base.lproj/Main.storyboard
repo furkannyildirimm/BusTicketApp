@@ -146,17 +146,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2o-Jp-AW7">
-                                <rect key="frame" x="43" y="381" width="240" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-pB-ZQB">
-                                <rect key="frame" x="122" y="768" width="151" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="IKi-bx-5HE">
+                                <rect key="frame" x="40" y="423" width="313" height="301.66666666666674"/>
+                                <color key="tintColor" red="0.92502170800000005" green="0.39139875769999999" blue="0.20069456099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="dateSelectedFromDatePicker:" destination="n1T-T5-D1I" eventType="valueChanged" id="GSH-kE-3wf"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="B0Q-KT-cVE">
+                                <rect key="frame" x="8" y="111" width="377" height="304"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WrE-Im-1e5">
+                                        <rect key="frame" x="18.666666666666657" y="0.0" width="340" height="231"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="v5n-YD-SNY">
+                                                <rect key="frame" x="0.0" y="0.0" width="242" height="231"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5dY-7P-OEk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="242" height="71.333333333333329"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Arrival Location:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-0m-Z8o">
+                                                                <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g90-iX-z4S">
+                                                                <rect key="frame" x="0.0" y="21.333333333333343" width="242" height="50"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="RUF-p7-CDl"/>
+                                                                    <constraint firstAttribute="width" constant="242" id="y04-Yd-IDb"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="n1T-T5-D1I" id="2qg-eI-532"/>
+                                                                    <outlet property="delegate" destination="n1T-T5-D1I" id="XlE-ii-Sla"/>
+                                                                </connections>
+                                                            </pickerView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PEs-Og-Oab">
+                                                        <rect key="frame" x="0.0" y="153.33333333333331" width="242" height="77.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Departure Location:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwV-eS-Ewu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203" height="19.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <pickerView contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="CvZ-Ye-2De">
+                                                                <rect key="frame" x="0.0" y="27.666666666666686" width="242" height="50"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="242" id="1Q4-QT-K8t"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="qKH-DM-yvD"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="n1T-T5-D1I" id="nnY-dX-vbt"/>
+                                                                    <outlet property="delegate" destination="n1T-T5-D1I" id="Du9-5b-rVt"/>
+                                                                </connections>
+                                                            </pickerView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="PEs-Og-Oab" firstAttribute="top" secondItem="v5n-YD-SNY" secondAttribute="top" constant="153.33333333333331" id="euw-k1-pY2"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdo-fq-2yw">
+                                                <rect key="frame" x="272" y="0.0" width="68" height="231"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="ylD-I7-zYz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="HcI-2i-gRs"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="hV9-Ja-BnI">
+                                                        <rect key="frame" x="0.0" y="87" width="68" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="fCS-WJ-ocC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="zts-y0-hqc">
+                                                        <rect key="frame" x="0.0" y="161" width="68" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="3Fv-c6-ClK"/>
+                                                            <constraint firstAttribute="width" constant="68" id="ycd-rR-sfu"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Jft-M9-7RV">
+                                        <rect key="frame" x="27.666666666666657" y="241" width="321.66666666666674" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2o-Jp-AW7">
+                                                <rect key="frame" x="0.0" y="17.333333333333314" width="124.66666666666667" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takvim" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-ru-1yV">
+                                                <rect key="frame" x="274.66666666666663" y="0.0" width="47" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="47" id="UUa-st-iuV"/>
+                                                    <constraint firstAttribute="height" constant="63" id="vNQ-6q-3LD"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-pB-ZQB">
+                                <rect key="frame" x="121.66666666666669" y="776" width="150" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2lx-zg-ReR"/>
+                                    <constraint firstAttribute="width" constant="150" id="hVM-bR-Mo1"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search "/>
@@ -169,76 +289,19 @@
                                     <action selector="searchBtn:" destination="n1T-T5-D1I" eventType="touchUpInside" id="Tty-JE-gfL"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="IKi-bx-5HE">
-                                <rect key="frame" x="43" y="427" width="308" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.92502170800000005" green="0.39139875769999999" blue="0.20069456099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="dateSelectedFromDatePicker:" destination="n1T-T5-D1I" eventType="valueChanged" id="GSH-kE-3wf"/>
-                                </connections>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Departure Location:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwV-eS-Ewu">
-                                <rect key="frame" x="16" y="257" width="320" height="20.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" semanticContentAttribute="playback" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvZ-Ye-2De">
-                                <rect key="frame" x="16" y="286" width="242" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="n1T-T5-D1I" id="nnY-dX-vbt"/>
-                                    <outlet property="delegate" destination="n1T-T5-D1I" id="Du9-5b-rVt"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Arrival Location:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-0m-Z8o">
-                                <rect key="frame" x="16" y="103" width="174.66666666666652" height="20.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g90-iX-z4S">
-                                <rect key="frame" x="16" y="125" width="242" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="n1T-T5-D1I" id="2qg-eI-532"/>
-                                    <outlet property="delegate" destination="n1T-T5-D1I" id="XlE-ii-Sla"/>
-                                </connections>
-                            </pickerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="ylD-I7-zYz">
-                                <rect key="frame" x="288" y="115" width="68" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="zts-y0-hqc">
-                                <rect key="frame" x="288" y="276" width="68" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="takvim" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-ru-1yV">
-                                <rect key="frame" x="299" y="364" width="47" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="hV9-Ja-BnI">
-                                <rect key="frame" x="295" y="203" width="55" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KC0-u1-rmQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IKi-bx-5HE" firstAttribute="top" secondItem="B0Q-KT-cVE" secondAttribute="bottom" constant="8" id="1G7-CC-i80"/>
+                            <constraint firstItem="B0Q-KT-cVE" firstAttribute="leading" secondItem="0lk-jc-cLZ" secondAttribute="leading" constant="8" id="9I2-Wd-fjj"/>
+                            <constraint firstItem="B0Q-KT-cVE" firstAttribute="top" secondItem="KC0-u1-rmQ" secondAttribute="top" constant="8" id="HIA-y4-RmF"/>
+                            <constraint firstItem="KC0-u1-rmQ" firstAttribute="trailing" secondItem="IKi-bx-5HE" secondAttribute="trailing" constant="40" id="QEw-Kr-wVX"/>
+                            <constraint firstItem="6JM-pB-ZQB" firstAttribute="centerX" secondItem="0lk-jc-cLZ" secondAttribute="centerX" id="WH6-b1-7SZ"/>
+                            <constraint firstItem="IKi-bx-5HE" firstAttribute="leading" secondItem="KC0-u1-rmQ" secondAttribute="leading" constant="40" id="bUC-5V-n0j"/>
+                            <constraint firstItem="KC0-u1-rmQ" firstAttribute="trailing" secondItem="B0Q-KT-cVE" secondAttribute="trailing" constant="8" id="jyY-AZ-cVB"/>
+                            <constraint firstItem="6JM-pB-ZQB" firstAttribute="bottom" secondItem="KC0-u1-rmQ" secondAttribute="bottom" constant="8" id="y3j-we-cSs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lIY-Jt-xMf">
                         <string key="title">Location and Date

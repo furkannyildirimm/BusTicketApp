@@ -13,12 +13,21 @@ class SeatCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var seatNumberLabel: UILabel!
     
-    func setup(model: Seats) {
-        seatImg.image = UIImage(named: model.seatsImage ?? "")
+    
+    
+    
+    
+    func setup(seatNumber: String, selectedSeats: [Int]) {
+        seatNumberLabel.text = seatNumber
+        if let seat = Int(seatNumber){
+            if selectedSeats.contains(seat) {
+                seatImg.image = UIImage(named: "seat2")
+            } else {
+                seatImg.image = UIImage(named: "seat")
+            }
+        }
         
     }
     
-    func setup(seatNumber: Int) {
-        seatNumberLabel.text = "\(seatNumber)"
-    }
+
 }

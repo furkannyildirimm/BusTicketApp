@@ -8,7 +8,7 @@
 import UIKit
 
 class TicketViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var selectedCompanyList = [BusTicket]()
@@ -18,7 +18,7 @@ class TicketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: "VoyageCell", bundle: nil), forCellReuseIdentifier: "VoyageCell")
         selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "kamilkoc",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
         selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "asyaTur",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
@@ -27,11 +27,11 @@ class TicketViewController: UIViewController {
         selectedCompanyList.append(BusTicket(time: "12:30", price: "200 ₺", busCompImg: "metro",from: ticketMove.from, to: ticketMove.to, day: ticketMove.day, month: ticketMove.month, year: ticketMove.year))
         
         print(ticketMove.from)
-
+        
     }
     
     
-    }
+}
 
 
 
@@ -55,7 +55,7 @@ extension TicketViewController: UITableViewDataSource, UITableViewDelegate {
         guard let vc = storyboard?.instantiateViewController (withIdentifier: "SeatViewController") as? SeatViewController else { return }
         vc.busTicketModel = selectModel
         navigationController?.pushViewController(vc, animated: true)
-       
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160

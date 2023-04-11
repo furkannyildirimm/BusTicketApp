@@ -73,7 +73,7 @@ class PayTicketViewController: UIViewController {
     }
     
     @IBAction func completePayment() {
-        // Ödeme işlemini tamamladığınızda timer'ı durdurun
+        
         timer?.invalidate()
         timer = nil
     }
