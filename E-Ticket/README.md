@@ -19,7 +19,7 @@ Bu uygulama, otobüs biletleri satın almak ve yönetmek için kullanılabilir.
 - Sefer detayları sayfasında, bilet sayısı ve koltuk seçimi yapabilirsiniz.
 - Koltuk seçiminde tamamlandıktan sonra, ödeme sayfasına yönlendirileceksiniz.
 - Ödeme işlemini tamamladıktan sonra, biletiniz onaylanacak.
-- Biletlerim sayfasında, satın alınan biletlerin bir listesini görebilirsiniz. Burada bilet iptal işlemi de gerçekleştirebilirsiniz.
+
 
 ## Gereksinimler
 
