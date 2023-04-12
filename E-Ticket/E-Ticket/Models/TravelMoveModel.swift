@@ -21,5 +21,4 @@ struct TravelMoveModel{
         self.month = month
         self.year = year
     }
-    
 }

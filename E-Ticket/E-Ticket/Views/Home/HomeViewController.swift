@@ -31,10 +31,11 @@ class HomeViewController: UIViewController {
         dateView.minimumDate = Date()
         
     }
+    
     @IBAction func searchBtn(_ sender: UIButton) {
         
         if fromData == toData {
-            Alert.showAlert(alertTitle: "UYARI", alertMessage: "Aynı Şehir Seçilemez.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+            Alert.showAlert(alertTitle: "Warning!", alertMessage: "You have selected the same city.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
         }else {
             
             getMoveData()
@@ -48,9 +49,6 @@ class HomeViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
             
         }
-        
-        
-        
     }
     
     func saveData() {
@@ -64,8 +62,6 @@ class HomeViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MMM-yyyy"
         selectDateLabel.text = dateFormatter.string(from: dateView.date)
-        //BusTicketHelper.shared.date = selectDateLabel.text ?? ""
-        
     }
     
     func getMoveData(){
@@ -77,7 +73,6 @@ class HomeViewController: UIViewController {
         info.year = date.year!
         self.date = "\(date.day!)" + "/" + "\(date.month!)" + "/" + "\(date.year!)"
     }
-    
 }
 
 
@@ -102,9 +97,7 @@ extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource{
         } else if pickerView == chooseCityTwoView {
             toData = cities[row]
         }
-        
     }
-    
 }
 
 

@@ -11,7 +11,6 @@
 		5805DF6529E0C5C200BEF4D8 /* TravelMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5805DF6429E0C5C200BEF4D8 /* TravelMoveModel.swift */; };
 		5805DF6729E0D32700BEF4D8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5805DF6629E0D32700BEF4D8 /* Alert.swift */; };
 		581462F129D9AC5F00B32562 /* BusTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581462F029D9AC5F00B32562 /* BusTicket.swift */; };
-		581462F329D9B13000B32562 /* BusTicketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581462F229D9B13000B32562 /* BusTicketHelper.swift */; };
 		58151DE429DB5CF800797F73 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58151DE329DB5CF800797F73 /* SeatViewController.swift */; };
 		58AFC2FD29E3055D00C34519 /* PayTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFC2FC29E3055D00C34519 /* PayTicketViewController.swift */; };
 		58AFC2FF29E311FA00C34519 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFC2FE29E311FA00C34519 /* Passenger.swift */; };
@@ -38,7 +37,6 @@
 		5805DF6429E0C5C200BEF4D8 /* TravelMoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMoveModel.swift; sourceTree = "<group>"; };
 		5805DF6629E0D32700BEF4D8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		581462F029D9AC5F00B32562 /* BusTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTicket.swift; sourceTree = "<group>"; };
-		581462F229D9B13000B32562 /* BusTicketHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTicketHelper.swift; sourceTree = "<group>"; };
 		58151DE329DB5CF800797F73 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		58AFC2FC29E3055D00C34519 /* PayTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTicketViewController.swift; sourceTree = "<group>"; };
 		58AFC2FE29E311FA00C34519 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
@@ -87,6 +85,14 @@
 				58151DE329DB5CF800797F73 /* SeatViewController.swift */,
 			);
 			path = SeatViewController;
+			sourceTree = "<group>";
+		};
+		586AB18629E63F3F003FC1F1 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5805DF6629E0D32700BEF4D8 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		58AFC2FB29E304E200C34519 /* PayTicketViewController */ = {
@@ -138,6 +144,7 @@
 				58E5AD5329D8A46800C7280C /* Views */,
 				58E5AD5229D8A44800C7280C /* Models */,
 				58E5AD4E29D8A30300C7280C /* Extensions */,
+				586AB18629E63F3F003FC1F1 /* Alert */,
 				58E5AD3729D89DEB00C7280C /* AppDelegate.swift */,
 				58E5AD3929D89DEB00C7280C /* SceneDelegate.swift */,
 				58E5AD3B29D89DEB00C7280C /* ViewController.swift */,
@@ -145,8 +152,6 @@
 				58E5AD4029D89DEB00C7280C /* Assets.xcassets */,
 				58E5AD4229D89DEB00C7280C /* LaunchScreen.storyboard */,
 				58E5AD4529D89DEB00C7280C /* Info.plist */,
-				581462F229D9B13000B32562 /* BusTicketHelper.swift */,
-				5805DF6629E0D32700BEF4D8 /* Alert.swift */,
 			);
 			path = "E-Ticket";
 			sourceTree = "<group>";
@@ -291,7 +296,6 @@
 				58E5AD3A29D89DEB00C7280C /* SceneDelegate.swift in Sources */,
 				58AFC2FF29E311FA00C34519 /* Passenger.swift in Sources */,
 				58151DE429DB5CF800797F73 /* SeatViewController.swift in Sources */,
-				581462F329D9B13000B32562 /* BusTicketHelper.swift in Sources */,
 				5800F49929D8DFFB008DCE51 /* TicketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

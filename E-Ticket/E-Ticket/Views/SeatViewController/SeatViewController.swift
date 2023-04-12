@@ -11,7 +11,6 @@ final class SeatViewController: UIViewController{
     
     var totalSeats = 56
     var counter = 0
-    
     var busSeatNumDict = [Int : String]()
     var pathWayNumber = Int()
     var seatNum = Int()
@@ -24,8 +23,6 @@ final class SeatViewController: UIViewController{
     var selectedIndexPath: IndexPath?
     var selectedSeats = [Int]()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,10 +32,7 @@ final class SeatViewController: UIViewController{
         
         seatsCollectionView?.reloadData()
         
-        
-        
     }
-    
     
     @IBAction func buyTicketBtn(_ sender: UIButton) {
         
@@ -46,7 +40,6 @@ final class SeatViewController: UIViewController{
             Alert.showAlert(alertTitle: "UYARI", alertMessage: "Koltuk Seçimi yapınız.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
         }
     }
-    
     
     private func configureCollectionView(){
         
@@ -62,16 +55,16 @@ final class SeatViewController: UIViewController{
     }
     
     func prepareSeatsNumber() {
-        pathWayNumber = 2 // CENTER - PASSENGER CAN WALK
-        seatNum = 1  // STARTING NUMBER
+        pathWayNumber = 2
+        seatNum = 1
         for i in 0...totalSeats{
-            if i == pathWayNumber { // If it s centre, values empty to dictionary
+            if i == pathWayNumber {
                 if i == 56 {
                     busSeatNumDict[i] = String(seatNum)
                     seatNum = seatNum + 1
                 } else {
                     busSeatNumDict[i] = ""
-                    pathWayNumber = pathWayNumber + 5 // Position empty - 2,7,12,17,22 ...... like that
+                    pathWayNumber = pathWayNumber + 5
                 }
             } else {
                 busSeatNumDict[i] = String(seatNum)
@@ -79,11 +72,11 @@ final class SeatViewController: UIViewController{
             }
         }
     }
-    
 }
 
 extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 55
     }
     
@@ -91,9 +84,7 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as! SeatCollectionViewCell
         
-        
         cell.seatNumberLabel.text = busSeatNumDict[indexPath.row]
-        
         
         let hidden = (indexPath.row == 28 || indexPath.row == 29) || (indexPath.row - 2) % 5 == 0 && indexPath.row <= totalSeats
         cell.isHidden = hidden
@@ -102,12 +93,8 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.setup(seatNumber: seatNumber, selectedSeats: selectedSeats)
         }
         
-        
         return cell
-        
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -129,7 +116,7 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 selectedSeats.append(seatNumber)
                 selectedCell.seatImg.image = UIImage(named: "seat2")
             } else {
-                Alert.showAlert(alertTitle: "UYARI", alertMessage: "5 Koltuktan fazla seçemezsin.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+                Alert.showAlert(alertTitle: "Warning!", alertMessage: "You can select up to 5 seats.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
                 
             }
         }
@@ -146,9 +133,6 @@ extension SeatViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         }
     }
-    
-    
-    
 }
 
 

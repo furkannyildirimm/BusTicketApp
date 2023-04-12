@@ -20,5 +20,4 @@ class Passenger {
         self.ıd = ıd
         self.phoneNumber = phoneNumber
     }
-    
 }

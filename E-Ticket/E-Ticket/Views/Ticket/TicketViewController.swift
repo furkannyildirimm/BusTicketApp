@@ -29,11 +29,7 @@ class TicketViewController: UIViewController {
         print(ticketMove.from)
         
     }
-    
-    
 }
-
-
 
 extension TicketViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

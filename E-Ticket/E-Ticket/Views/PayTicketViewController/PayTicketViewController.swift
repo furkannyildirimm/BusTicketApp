@@ -9,7 +9,7 @@ import UIKit
 
 class PayTicketViewController: UIViewController {
     
-    let paymentTimeLimit: TimeInterval = 20
+    let paymentTimeLimit: TimeInterval = 120
     var remainingTime: TimeInterval = 0
     var timer: Timer?
     
