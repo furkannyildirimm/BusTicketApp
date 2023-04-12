@@ -37,7 +37,7 @@ final class SeatViewController: UIViewController{
     @IBAction func buyTicketBtn(_ sender: UIButton) {
         
         if selectedSeats.count == 0 {
-            Alert.showAlert(alertTitle: "UYARI", alertMessage: "Koltuk Seçimi yapınız.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
+            Alert.showAlert(alertTitle: "Warning!", alertMessage: "Please select a seat.", defaultTitle: "OK", cancelTitle: "Cancel", viewController: self)
         }
     }
     

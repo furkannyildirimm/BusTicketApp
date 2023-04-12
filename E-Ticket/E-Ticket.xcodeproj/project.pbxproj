@@ -12,6 +12,7 @@
 		5805DF6729E0D32700BEF4D8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5805DF6629E0D32700BEF4D8 /* Alert.swift */; };
 		581462F129D9AC5F00B32562 /* BusTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581462F029D9AC5F00B32562 /* BusTicket.swift */; };
 		58151DE429DB5CF800797F73 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58151DE329DB5CF800797F73 /* SeatViewController.swift */; };
+		586AB18829E64270003FC1F1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 586AB18729E64270003FC1F1 /* README.md */; };
 		58AFC2FD29E3055D00C34519 /* PayTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFC2FC29E3055D00C34519 /* PayTicketViewController.swift */; };
 		58AFC2FF29E311FA00C34519 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AFC2FE29E311FA00C34519 /* Passenger.swift */; };
 		58B7B8A329DA066800166932 /* VoyageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B7B8A129DA066800166932 /* VoyageCell.swift */; };
@@ -38,6 +39,7 @@
 		5805DF6629E0D32700BEF4D8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		581462F029D9AC5F00B32562 /* BusTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTicket.swift; sourceTree = "<group>"; };
 		58151DE329DB5CF800797F73 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
+		586AB18729E64270003FC1F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		58AFC2FC29E3055D00C34519 /* PayTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayTicketViewController.swift; sourceTree = "<group>"; };
 		58AFC2FE29E311FA00C34519 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
 		58B7B8A129DA066800166932 /* VoyageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCell.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		58E5AD2B29D89DEB00C7280C = {
 			isa = PBXGroup;
 			children = (
+				586AB18729E64270003FC1F1 /* README.md */,
 				58E5AD3629D89DEB00C7280C /* E-Ticket */,
 				58E5AD3529D89DEB00C7280C /* Products */,
 			);
@@ -266,6 +269,7 @@
 			files = (
 				58E5AD4429D89DEB00C7280C /* LaunchScreen.storyboard in Resources */,
 				58E5AD4129D89DEB00C7280C /* Assets.xcassets in Resources */,
+				586AB18829E64270003FC1F1 /* README.md in Resources */,
 				58B7B8A429DA066800166932 /* VoyageCell.xib in Resources */,
 				58E5AD3F29D89DEB00C7280C /* Main.storyboard in Resources */,
 			);
