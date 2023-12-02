@@ -29,8 +29,9 @@ Bu uygulama, otobüs biletleri satın almak ve yönetmek için kullanılabilir.
 
 ## Uygulama İçi Resimler
 
-| <img src="Image/1.png" width="100"/> | <img src="Image/2.png" width="100"/> | <img src="Image/3.png" width="100"/> | <img src="Image/4.png" width="100"/> | <img src="Image/5.png" width="100"/> | <img src="Image/6.png" width="100"/> |
-|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
-| <img src="Image/7.png" width="100"/> | <img src="Image/8.png" width="100"/> | <img src="Image/9.png" width="100"/> | <img src="Image/10.png" width="100"/>| <img src="Image/11.png" width="100"/>| <img src="Image/12.png" width="100"/>|
-| <img src="Image/13.png" width="100"/>| <img src="Image/14.png" width="100"/>| <img src="Image/15.png" width="100"/>| | | |
+| <img src="Image/1.png" width="150"/> | <img src="Image/2.png" width="150"/> | <img src="Image/3.png" width="150"/> | <img src="Image/4.png" width="150"/> | <img src="Image/5.png" width="150"/> |
+|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
+| <img src="Image/6.png" width="150"/> | <img src="Image/7.png" width="150"/> | <img src="Image/8.png" width="150"/> | <img src="Image/9.png" width="150"/> | <img src="Image/10.png" width="150"/>|
+| <img src="Image/11.png" width="150"/>| <img src="Image/12.png" width="150"/>| <img src="Image/13.png" width="150"/>| <img src="Image/14.png" width="150"/>| <img src="Image/15.png" width="150"/>|
+
 
